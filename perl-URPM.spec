@@ -3,7 +3,7 @@
 %define name perl-URPM
 %define real_name URPM
 %define version 1.63
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
 %define rpm_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' rpm)
@@ -23,7 +23,7 @@ URL:		http://cvs.mandriva.com/cgi-bin/viewvc.cgi/soft/perl-URPM/
 BuildRequires:	perl%{?mdkversion:-devel}
 BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	perl(MDV::Packdrakeng)
-Requires:	rpm >= %{rpm_version}
+Requires:	rpm = %{rpm_version}
 Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
