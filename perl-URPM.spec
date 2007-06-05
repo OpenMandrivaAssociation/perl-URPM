@@ -23,6 +23,9 @@ URL:		http://cvs.mandriva.com/cgi-bin/viewvc.cgi/soft/perl-URPM/
 BuildRequires:	perl%{?mdkversion:-devel}
 BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	perl(MDV::Packdrakeng)
+
+# requires rpm used for build because librpm API is not that stable
+# (but not requiring same release, hopefully we won't break it patching rpm)
 Requires:	rpm = %{rpm_version}
 Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
