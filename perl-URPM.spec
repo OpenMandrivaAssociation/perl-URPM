@@ -2,11 +2,11 @@
 
 %define name perl-URPM
 %define real_name URPM
-%define version 2.07
+%define version 2.08
 %define release %mkrel 1
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
-%define rpm_version %(rpm -q --queryformat '%{VERSION}' rpm)
+%define rpm_version %(rpm -q --queryformat '%{EPOCH}:%{VERSION}' rpm)
 
 %{expand:%%define compat_makeinstall_std %(perl -e 'printf "%%s\n", "%{?makeinstall_std:1}" ? "%%makeinstall_std" : "%%{__make} install PREFIX=%%{buildroot}%%{_prefix}"')}
 %{expand:%%define compat_perl_vendorarch %(perl -MConfig -e 'printf "%%s\n", "%{?perl_vendorarch:1}" ? "%%{perl_vendorarch}" : "$Config{installvendorarch}"')}
