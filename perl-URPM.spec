@@ -19,7 +19,7 @@ Release:	%{real_release}
 License:	GPL or Artistic
 Group:		%{group}
 Source:		%{real_name}-%{version}.tar.bz2
-URL:		http://cvs.mandriva.com/cgi-bin/viewvc.cgi/soft/perl-URPM/
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM/
 BuildRequires:	perl%{?mdkversion:-devel}
 BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	perl(MDV::Packdrakeng)
