@@ -2,7 +2,7 @@
 
 %define name perl-URPM
 %define real_name URPM
-%define version 2.10
+%define version 3.00
 %define release %mkrel 1
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
@@ -33,6 +33,9 @@ Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+Conflicts:	urpmi <= 4.10.17
+Conflicts:	drakx-installer-stage2 <= 10.5.6
+
 %define _requires_exceptions perl(URPM::DB)\\|perl(URPM::Package)\\|perl(URPM::Transaction)
 
 %description
@@ -45,6 +48,9 @@ hdlist files and manage them in memory.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+
+%check
+%{__make} test
 
 %install
 %{__rm} -rf %{buildroot}
