@@ -31,6 +31,7 @@ Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 Conflicts:	urpmi <= 4.10.17
 Conflicts:	drakx-installer-stage2 <= 10.5.6
