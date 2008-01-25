@@ -3,7 +3,7 @@
 %define name perl-URPM
 %define real_name URPM
 %define version 3.07
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
@@ -24,9 +24,8 @@ BuildRequires:	perl%{?mdkversion:-devel}
 BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	perl(MDV::Packdrakeng)
 
-# requires rpm used for build because librpm API is not that stable
-# (but not requiring same release, hopefully we won't break it patching rpm)
-Requires:	rpm = %{rpm_version}
+# we can now expect librpm API to be backward compatible
+Requires:	rpm >= %{rpm_version}
 Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
