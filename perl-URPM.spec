@@ -3,7 +3,7 @@
 %define name perl-URPM
 %define real_name URPM
 %define version 3.36
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
@@ -46,7 +46,8 @@ hdlist files and manage them in memory.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+#%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+%{__make} OPTIMIZE=""
 
 %check
 %{__make} test
