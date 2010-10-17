@@ -3,7 +3,7 @@
 %define name perl-URPM
 %define real_name URPM
 %define version 3.36
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
@@ -46,9 +46,8 @@ hdlist files and manage them in memory.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-# (tv) fix segfaulting (#61144); we could keep all flags but s/-O2/-O1/ which is enought to fix it:
-#%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
-%{__make} OPTIMIZE=""
+# (tv) fix segfaulting (#61144); -O1 is OK, -O2 is not, the flag that made the difference is -fno-gcse:
+%{__make} OPTIMIZE="$RPM_OPT_FLAGS -fno-gcse"
 
 %check
 %{__make} test
