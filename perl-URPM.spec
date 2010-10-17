@@ -46,6 +46,7 @@ hdlist files and manage them in memory.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
+# (tv) fix segfaulting (#61144); we could keep all flags but s/-O2/-O1/ which is enought to fix it:
 #%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
 %{__make} OPTIMIZE=""
 
