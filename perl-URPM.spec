@@ -2,7 +2,7 @@
 
 %define name perl-URPM
 %define real_name URPM
-%define version 3.36
+%define version 3.37
 %define release %mkrel 4
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
