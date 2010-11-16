@@ -2,8 +2,8 @@
 
 %define name perl-URPM
 %define real_name URPM
-%define version 3.37
-%define release %mkrel 6
+%define version 3.38
+%define release %mkrel 1
 
 %define group %(perl -e 'printf "%%s\\n", "%_vendor" =~ /\\bmandr/i ? "Development/Perl" : "Applications/CPAN"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
