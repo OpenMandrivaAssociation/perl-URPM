@@ -2,8 +2,8 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
-Version:	4.4
-Release:	%mkrel 2
+Version:	4.5
+Release:	%mkrel 1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{real_name}-%{version}.tar.xz
