@@ -15,6 +15,7 @@ BuildRequires:	perl(MDV::Packdrakeng)
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
+Conflicts:	urpmi < 6.44
 Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
