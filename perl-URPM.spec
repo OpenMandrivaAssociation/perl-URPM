@@ -3,7 +3,7 @@
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
 Version:	4.13
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{real_name}-%{version}.tar.xz
