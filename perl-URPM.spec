@@ -56,9 +56,6 @@ make test
 rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %defattr(-,root,root)
 %doc README ChangeLog
