@@ -32,7 +32,7 @@ hdlist files and manage them in memory.
 %setup -q -n %{real_name}-%{version}
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 %make
 
 %check
