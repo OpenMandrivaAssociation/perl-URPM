@@ -2,7 +2,7 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
-Version:	4.17
+Version:	4.18
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -33,18 +33,7 @@ hdlist files and manage them in memory.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-# (tv) fix segfaulting (#61144); -O1 is OK, -O2 is not, the flag that made the difference is -fno-gcse:
-# (proyvind): TODO: still valid with rpm 5.3.6?
-# (proyvind): really odd, in addition to disabling -fstack-protector (#61690),
-#	      if any optimization level is used, it will cause problems, but if
-#	      explicitly enabling all the same optimizations manually, it won't
-#	      segfault... Just cowardly working around for now...
-%make \
-%ifarch %{ix86}
-OPTIMIZE="$RPM_OPT_FLAGS -fno-stack-protector -O0 `gcc -O2 -Q --help=optimize|grep enabled|cut -d\  -f3| tr '\n' ' '` -fno-gcse"
-%else
-OPTIMIZE="$RPM_OPT_FLAGS"
-%endif
+%make
 
 %check
 # skip check suite when building on rpm 4, as some parts of it depends on
