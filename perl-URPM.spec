@@ -20,7 +20,6 @@ Requires:	perl(MDV::Packdrakeng)
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %define _requires_exceptions perl(URPM::DB)\\|perl(URPM::Package)\\|perl(URPM::Transaction)
 
@@ -42,11 +41,9 @@ perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc README ChangeLog
 %{_mandir}/man3/*
 %{perl_vendorarch}/URPM.pm
