@@ -3,7 +3,7 @@
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
 Version:	4.38
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{real_name}-%{version}.tar.xz
@@ -12,7 +12,7 @@ URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM/
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:  perl-devel >= 2:5.14
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-3
+BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
