@@ -2,12 +2,11 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
-Version:	4.38
-Release:	5
+Version:	4.39
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{real_name}-%{version}.tar.xz
-Patch:		perl-URPM-4.38-buildfix.patch
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM/
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
@@ -31,7 +30,6 @@ hdlist files and manage them in memory.
 
 %prep
 %setup -q -n %{real_name}-%{version}
-%patch -p1 -b .compile~
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
