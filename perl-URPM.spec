@@ -22,8 +22,6 @@ Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
 
-%define _requires_exceptions perl(URPM::DB)\\|perl(URPM::Package)\\|perl(URPM::Transaction)
-
 %description
 The URPM module allows you to manipulate rpm files, rpm header files and
 hdlist files and manage them in memory.
