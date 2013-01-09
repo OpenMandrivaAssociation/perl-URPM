@@ -12,6 +12,7 @@ BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
 BuildRequires:	perl-List-MoreUtils
+BuildRequires:	perl-JSON-PP
 
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
