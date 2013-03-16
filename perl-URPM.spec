@@ -63,12 +63,12 @@ make test
 	  ourself from breakages during new major berkeley db version upgrades
 	o don't disable strict aliasing
 
-* Sat Jun 09 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.43-1
+* Sat Jun 09 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.43-1
 + Revision: 804296
 - add a simple detectXZ() function for reading the magic ourself in situations
   where we ie. cannot rely on ie. libmagic
 
-* Wed May 16 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.42-1
+* Wed May 16 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.42-1
 + Revision: 799258
 - new version:
   	o make URPM::DB::info use berkeley db api rather than using rpmdb
@@ -76,18 +76,18 @@ make test
   	  less fragile
   	o fix building with rpm >= 5.4.9 where BDB data types are hidden
 
-* Thu Apr 12 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.41-1
+* Thu Apr 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.41-1
 + Revision: 790428
 - revert change in previous version, it resulted in unsupported rpms being
   installed, better to properly handle this conversion in rpm itself now
 
-* Thu Mar 29 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.40-1
+* Thu Mar 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.40-1
 + Revision: 788154
 - handle rpms using old format with missing version, which would result in crash
   with ie. Oracle Java rpm package (#65443)
 - fix mixed-use-of-spaces-and-tabs
 
-* Wed Mar 07 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.39-1
+* Wed Mar 07 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.39-1
 + Revision: 782591
 - drop _requires_exceptions, it's not supported with internal dep generator
   which anyways drops dependencies on self...
@@ -115,16 +115,16 @@ make test
 + Revision: 762852
 - Make it build with perl 5.14.x
 
-* Wed Nov 02 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.38-1
+* Wed Nov 02 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.38-1
 + Revision: 712240
 - new version fixing build with API changes of rpm 5.4
 
-* Sun Jul 24 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.37-1
+* Sun Jul 24 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.37-1
 + Revision: 691439
 - fix URPM::Resolve::fullname_parts() to also work without disttag & distepoch
   (this will make urpmf & urpmq work with xml metadata again, #61852)
 
-* Wed Jul 06 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.36-1
+* Wed Jul 06 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.36-1
 + Revision: 688952
 - new version:
   	o document URPM::DB::convert() in API
@@ -132,7 +132,7 @@ make test
 - new version:
   	o fix a regression breaking promotion of dependencies on conflicts
 
-* Thu Jun 23 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.34-1
+* Thu Jun 23 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.34-1
 + Revision: 686830
 - new version:
   	o add a workaround for handling upgrade from older berkeley db versions
@@ -148,7 +148,7 @@ make test
 + Revision: 684936
 - P0: fix urpmf errors while searching.
 
-* Tue May 31 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.33-1
+* Tue May 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.33-1
 + Revision: 682089
 - new version:
   	o add disttag & distepoch to $state->{rejected} for assisting parsing
@@ -156,7 +156,7 @@ make test
   	o add URPM::Resolve::fullname_parts() as a function parsing fullname
   	  with a regex assisted by provided disttag & distepoch
 
-* Tue May 31 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.32-1
+* Tue May 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.32-1
 + Revision: 682052
 - *really* fix URPM::Package->sourcerpm
 - new version:
@@ -165,18 +165,18 @@ make test
   	  creating a large regex to match them all at once (#61389, patch
   	  contributed by Shlomi Fish \o/)
 
-* Thu May 12 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.30-1
+* Thu May 12 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.30-1
 + Revision: 673923
 - new version:
   	o fix Resolve.pm/_choose_required() breakage after DUDF merge, causing
   	  ie. 'urpmq -d' to break (#63250, with big thanks to Funda\o/)
 
-* Sat May 07 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.29-1
+* Sat May 07 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.29-1
 + Revision: 671612
 - fix segfault when trying to get EVR of a src.rpm from synthesis, as @provides@
   are omitted for these
 
-* Thu May 05 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.28-1
+* Thu May 05 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.28-1
 + Revision: 669316
 - new version:
   	o revert attempt at refactorizing Trans_run() which turned out to give code
@@ -187,14 +187,14 @@ make test
   	  query table into rpm tags
   	o use newSVpvs() for pushing empty strings as constants in stead
 
-* Wed May 04 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.27-1
+* Wed May 04 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.27-1
 + Revision: 666266
 - new version:
   	o get the correct package filesize from header
   	o fix proper return of 'src' as arch for src.rpms
   	o fix confusion between %%{sourcerpm} & %%{sourcepackage} tags
 
-* Wed May 04 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.26-1
+* Wed May 04 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.26-1
 + Revision: 665126
 - really fix src.rpm handling
 - new version:
@@ -203,12 +203,12 @@ make test
   	o start on using gnu99 code
   	o fix some invalid free()s
 
-* Tue May 03 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.24-1
+* Tue May 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.24-1
 + Revision: 664662
 - new version:
   	o fix segfault caused by wrongly assigning arch to incorrect package
 
-* Tue May 03 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.23-1
+* Tue May 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.23-1
 + Revision: 663537
 - new version:
   	o check for termination signals so ie. that installs can be aborted
@@ -217,7 +217,7 @@ make test
   	o check that rpmdb was properly opened in read/write mode to prevent
   	  segfault if no write permissions
 
-* Tue Apr 26 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.22-1
+* Tue Apr 26 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.22-1
 + Revision: 659474
 - new version:
   	o add support for notriggers
@@ -226,14 +226,14 @@ make test
   	o fix possible breakage when trying to load non-existant dependency flags
   	o fix provide flags not being loaded for headers read from rpm files
 
-* Sat Apr 23 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.21-1
+* Sat Apr 23 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.21-1
 + Revision: 657378
 - new version:
   	o fix missing null terminator at end of @info@ string regression,
   	  causing random data to be appended at end of line
 - remove legacy rpm stuff..
 
-* Fri Apr 22 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.20-1
+* Fri Apr 22 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.20-1
 + Revision: 656732
 - new version:
   	o merge in some DUDF changes from Alexandre Lissy
@@ -243,13 +243,13 @@ make test
 + Revision: 650047
 - rebuild
 
-* Thu Mar 31 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.19-1
+* Thu Mar 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.19-1
 + Revision: 649486
 - pass %%optflags to OPTIMIZE again to ensure we compile with latest flags
 - new version:
   	o fix regression caused by memleak fix in previous release
 
-* Thu Mar 31 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.18-1
+* Thu Mar 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.18-1
 + Revision: 649342
 - new version:
   	o fix memleak in URPM::Pkg->evr()
@@ -258,14 +258,14 @@ make test
   	o fix odd i586 specific bug triggering segfault with -fstack-protector
   	  (#61690)
 
-* Wed Mar 30 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.17-1
+* Wed Mar 30 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.17-1
 + Revision: 649196
 - drop %%clean section
 - new version:
   	o fix conversion to older hash database format resulting in "missing"
   	  package from rpmdb
 
-* Tue Mar 29 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.16-1
+* Tue Mar 29 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.16-1
 + Revision: 648756
 - new version:
   	o add setInternalVariable() for changing various variables for debugging
@@ -278,11 +278,11 @@ make test
 + Revision: 640204
 - rebuild to obsolete old packages
 
-* Sat Feb 19 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.15-1
+* Sat Feb 19 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.15-1
 + Revision: 638726
 - fix segfault when there's no provides in synthesis (ie. with src.rpm)
 
-* Mon Feb 14 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.14-1
+* Mon Feb 14 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.14-1
 + Revision: 637659
 - new release:
         o use specified arch for packages to be removed, don't strip it away
@@ -294,7 +294,7 @@ make test
 + Revision: 637108
 - rebuild
 
-* Thu Jan 27 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.13-2
+* Thu Jan 27 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.13-2
 + Revision: 633188
 - add conflicts on urpmi < 6.44 to ensure rpmdb conversion
 - remove NVRA pattern matching hack, it's moved to rpm for now..
@@ -336,11 +336,11 @@ make test
   	  rather than trying to generate it from NVRA
   	o add URPM::DB::close()
 
-* Sun Jan 09 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.5-1
+* Sun Jan 09 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.5-1
 + Revision: 630828
 - fix breakage when installing to an empty chroot without db environment setup
 
-* Sun Jan 09 2011 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.4-2mdv2011.0
+* Sun Jan 09 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.4-2mdv2011.0
 + Revision: 630718
 - bump release for main/release...
 - merge rpm5 branch
@@ -638,7 +638,7 @@ make test
   (!! static buffer size limitation in callback_list_str_xpush() should be fixed !!)
 - 2.08: fix build on rpm 4.4.2.2
 
-  + Per Ã˜yvind Karlsen <peroyvind@mandriva.org>
+  + Per Øyvind Karlsen <peroyvind@mandriva.org>
     - make queryformat conditional for %%rpm_version
 
 * Mon Oct 01 2007 Pixel <pixel@mandriva.com> 2.07-1mdv2008.0
