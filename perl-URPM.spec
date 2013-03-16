@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM/
+URL:		https://abf.rosalinux.ru/moondrake/urpmi
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
