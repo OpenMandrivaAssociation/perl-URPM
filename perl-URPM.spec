@@ -1,12 +1,12 @@
-%define real_name URPM
+%define modname URPM
 
 Summary:	URPM module for perl
-Name:		perl-%{real_name}
+Name:		perl-%{modname}
 Version:	4.44
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Source0:	%{real_name}-%{version}.tar.xz
+Source0:	%{modname}-%{version}.tar.xz
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM/
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
@@ -29,7 +29,7 @@ The URPM module allows you to manipulate rpm files, rpm header files and
 hdlist files and manage them in memory.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{modname}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
