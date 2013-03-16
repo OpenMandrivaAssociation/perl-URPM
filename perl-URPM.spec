@@ -45,7 +45,7 @@ make test
 %makeinstall_std
 
 %files
-%doc README ChangeLog
+%doc README
 %{_mandir}/man3/*
 %{perl_vendorarch}/URPM.pm
 %dir %{perl_vendorarch}/URPM
