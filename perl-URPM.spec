@@ -2,8 +2,8 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{real_name}
-Version:	4.43
-Release:	4
+Version:	4.44
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{real_name}-%{version}.tar.xz
@@ -55,6 +55,14 @@ make test
 
 
 %changelog
+* Sat March 16 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.43-1
+- new version:
+	o disable rpmlint for building test package during regression tests
+	o move out some functions accessing berkeley db API directly into a
+	  RPMBDB module built together with rpm in order to really guard
+	  ourself from breakages during new major berkeley db version upgrades
+	o don't disable strict aliasing
+
 * Sat Jun 09 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 4.43-1
 + Revision: 804296
 - add a simple detectXZ() function for reading the magic ourself in situations
