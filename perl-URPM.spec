@@ -55,7 +55,7 @@ make test
 
 
 %changelog
-* Sat March 16 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.43-1
+* Sat Mar 16 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.44-1
 - new version:
 	o disable rpmlint for building test package during regression tests
 	o move out some functions accessing berkeley db API directly into a
@@ -71,10 +71,10 @@ make test
 * Wed May 16 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.42-1
 + Revision: 799258
 - new version:
-  	o make URPM::DB::info use berkeley db api rather than using rpmdb
-  	  functions that's not part of the public api, thus making things
-  	  less fragile
-  	o fix building with rpm >= 5.4.9 where BDB data types are hidden
+	o make URPM::DB::info use berkeley db api rather than using rpmdb
+	  functions that's not part of the public api, thus making things
+	  less fragile
+	o fix building with rpm >= 5.4.9 where BDB data types are hidden
 
 * Thu Apr 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.41-1
 + Revision: 790428
@@ -92,12 +92,12 @@ make test
 - drop _requires_exceptions, it's not supported with internal dep generator
   which anyways drops dependencies on self...
 - new version:
-  	o link against berkeley db as we're accessing it's API directly
-  	o workaround fts.h incompatibility with _FILE_OFFSET_BITS=64 to fix build
-  	  with perl 5.14.2 (from Bernhard Rosenkraenzer)
-  	o ~fix filesize computation
-  	o add support for bzip2 compressed synthesis (by using Fopen() from rpmio)
-  	o export rpmtag_from_string()
+	o link against berkeley db as we're accessing it's API directly
+	o workaround fts.h incompatibility with _FILE_OFFSET_BITS=64 to fix build
+	  with perl 5.14.2 (from Bernhard Rosenkraenzer)
+	o ~fix filesize computation
+	o add support for bzip2 compressed synthesis (by using Fopen() from rpmio)
+	o export rpmtag_from_string()
 
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 4.38-5
 + Revision: 765802
@@ -127,22 +127,24 @@ make test
 * Wed Jul 06 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.36-1
 + Revision: 688952
 - new version:
-  	o document URPM::DB::convert() in API
-  	o fix a segfault happening when URPM::DB::convert() is run without arguments
+	o document URPM::DB::convert() in API
+	o fix a segfault happening when URPM::DB::convert() is run without arguments
+
+* Wed Jun 25 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.35-1
 - new version:
-  	o fix a regression breaking promotion of dependencies on conflicts
+	o fix a regression breaking promotion of dependencies on conflicts
 
 * Thu Jun 23 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.34-1
 + Revision: 686830
 - new version:
-  	o add a workaround for handling upgrade from older berkeley db versions
-  	  which might not support new configuration in DB_CONFIG, causing it to
-  	  break during upgrade
-  	o add support for specifying tag name to match with
-  	  URPM::Transaction->remove()
-  	o add some regression tests for parsing disttag & distepoch from
-  	  synthesis
-  	o extract disttag & distepoch from new fields in @info@ of synthesis
+	o add a workaround for handling upgrade from older berkeley db versions
+	  which might not support new configuration in DB_CONFIG, causing it to
+	  break during upgrade
+	o add support for specifying tag name to match with
+	  URPM::Transaction->remove()
+	o add some regression tests for parsing disttag & distepoch from
+	  synthesis
+	o extract disttag & distepoch from new fields in @info@ of synthesis
 
 * Mon Jun 13 2011 Eugeni Dodonov <eugeni@mandriva.com> 4.33-2
 + Revision: 684936
@@ -151,25 +153,25 @@ make test
 * Tue May 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.33-1
 + Revision: 682089
 - new version:
-  	o add disttag & distepoch to $state->{rejected} for assisting parsing
-  	  of fullname with regex
-  	o add URPM::Resolve::fullname_parts() as a function parsing fullname
-  	  with a regex assisted by provided disttag & distepoch
+	o add disttag & distepoch to $state->{rejected} for assisting parsing
+	  of fullname with regex
+	o add URPM::Resolve::fullname_parts() as a function parsing fullname
+	  with a regex assisted by provided disttag & distepoch
 
 * Tue May 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.32-1
 + Revision: 682052
 - *really* fix URPM::Package->sourcerpm
 - new version:
-  	o fix URPM::Package->sourcerpm returning summary in stead of source rpm
-  	o fix slow matching of individual regexes for skipping dependencies by
-  	  creating a large regex to match them all at once (#61389, patch
-  	  contributed by Shlomi Fish \o/)
+	o fix URPM::Package->sourcerpm returning summary in stead of source rpm
+	o fix slow matching of individual regexes for skipping dependencies by
+	  creating a large regex to match them all at once (#61389, patch
+	  contributed by Shlomi Fish \o/)
 
 * Thu May 12 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.30-1
 + Revision: 673923
 - new version:
-  	o fix Resolve.pm/_choose_required() breakage after DUDF merge, causing
-  	  ie. 'urpmq -d' to break (#63250, with big thanks to Funda\o/)
+	o fix Resolve.pm/_choose_required() breakage after DUDF merge, causing
+	  ie. 'urpmq -d' to break (#63250, with big thanks to Funda\o/)
 
 * Sat May 07 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.29-1
 + Revision: 671612
@@ -179,65 +181,65 @@ make test
 * Thu May 05 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.28-1
 + Revision: 669316
 - new version:
-  	o revert attempt at refactorizing Trans_run() which turned out to give code
-  	  harder to read and introduced bugs of options not being parsed (#63205)
-  	o fix an invalid free() that would've happened if package summary were to be
-  	  missing and the "" string constant were attempted to be freed
-  	o fix odd problems caused by attempt at translating correct tag names for
-  	  query table into rpm tags
-  	o use newSVpvs() for pushing empty strings as constants in stead
+	o revert attempt at refactorizing Trans_run() which turned out to give code
+	  harder to read and introduced bugs of options not being parsed (#63205)
+	o fix an invalid free() that would've happened if package summary were to be
+	  missing and the "" string constant were attempted to be freed
+	o fix odd problems caused by attempt at translating correct tag names for
+	  query table into rpm tags
+	o use newSVpvs() for pushing empty strings as constants in stead
 
 * Wed May 04 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.27-1
 + Revision: 666266
 - new version:
-  	o get the correct package filesize from header
-  	o fix proper return of 'src' as arch for src.rpms
-  	o fix confusion between %%{sourcerpm} & %%{sourcepackage} tags
+	o get the correct package filesize from header
+	o fix proper return of 'src' as arch for src.rpms
+	o fix confusion between %%{sourcerpm} & %%{sourcepackage} tags
 
 * Wed May 04 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.26-1
 + Revision: 665126
 - really fix src.rpm handling
 - new version:
-  	o fix some invalid free()s
+	o fix some invalid free()s
 - new version:
-  	o start on using gnu99 code
-  	o fix some invalid free()s
+	o start on using gnu99 code
+	o fix some invalid free()s
 
 * Tue May 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.24-1
 + Revision: 664662
 - new version:
-  	o fix segfault caused by wrongly assigning arch to incorrect package
+	o fix segfault caused by wrongly assigning arch to incorrect package
 
 * Tue May 03 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.23-1
 + Revision: 663537
 - new version:
-  	o check for termination signals so ie. that installs can be aborted
-  	  with ^C
-  	o fix remaining memleaks
-  	o check that rpmdb was properly opened in read/write mode to prevent
-  	  segfault if no write permissions
+	o check for termination signals so ie. that installs can be aborted
+	  with ^C
+	o fix remaining memleaks
+	o check that rpmdb was properly opened in read/write mode to prevent
+	  segfault if no write permissions
 
 * Tue Apr 26 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.22-1
 + Revision: 659474
 - new version:
-  	o add support for notriggers
-  	o add support for nofdigests
-  	o fix getting expected NVRA tag
-  	o fix possible breakage when trying to load non-existant dependency flags
-  	o fix provide flags not being loaded for headers read from rpm files
+	o add support for notriggers
+	o add support for nofdigests
+	o fix getting expected NVRA tag
+	o fix possible breakage when trying to load non-existant dependency flags
+	o fix provide flags not being loaded for headers read from rpm files
 
 * Sat Apr 23 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.21-1
 + Revision: 657378
 - new version:
-  	o fix missing null terminator at end of @info@ string regression,
-  	  causing random data to be appended at end of line
+	o fix missing null terminator at end of @info@ string regression,
+	  causing random data to be appended at end of line
 - remove legacy rpm stuff..
 
 * Fri Apr 22 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.20-1
 + Revision: 656732
 - new version:
-  	o merge in some DUDF changes from Alexandre Lissy
-  	o add disttag & distepoch to @info@ in synthesis for easier parsing
+	o merge in some DUDF changes from Alexandre Lissy
+	o add disttag & distepoch to @info@ in synthesis for easier parsing
 
 * Sun Apr 03 2011 Funda Wang <fwang@mandriva.org> 4.19-2
 + Revision: 650047
@@ -247,32 +249,32 @@ make test
 + Revision: 649486
 - pass %%optflags to OPTIMIZE again to ensure we compile with latest flags
 - new version:
-  	o fix regression caused by memleak fix in previous release
+	o fix regression caused by memleak fix in previous release
 
 * Thu Mar 31 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.18-1
 + Revision: 649342
 - new version:
-  	o fix memleak in URPM::Pkg->evr()
-  	o drop URPM::DB::close() and teardown properly by calling rpmcliFini()
-  	  at exit
-  	o fix odd i586 specific bug triggering segfault with -fstack-protector
-  	  (#61690)
+	o fix memleak in URPM::Pkg->evr()
+	o drop URPM::DB::close() and teardown properly by calling rpmcliFini()
+	  at exit
+	o fix odd i586 specific bug triggering segfault with -fstack-protector
+	  (#61690)
 
 * Wed Mar 30 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.17-1
 + Revision: 649196
 - drop %%clean section
 - new version:
-  	o fix conversion to older hash database format resulting in "missing"
-  	  package from rpmdb
+	o fix conversion to older hash database format resulting in "missing"
+	  package from rpmdb
 
 * Tue Mar 29 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.16-1
 + Revision: 648756
 - new version:
-  	o add setInternalVariable() for changing various variables for debugging
-  	  etc. within rpmlib
-  	o support translate_message & raw_message options for
-  	  URPM::Transaction->check()
-  	o support versioned suggests
+	o add setInternalVariable() for changing various variables for debugging
+	  etc. within rpmlib
+	o support translate_message & raw_message options for
+	  URPM::Transaction->check()
+	o support versioned suggests
 
 * Sun Feb 27 2011 Funda Wang <fwang@mandriva.org> 4.15-2
 + Revision: 640204
@@ -285,10 +287,10 @@ make test
 * Mon Feb 14 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.14-1
 + Revision: 637659
 - new release:
-        o use specified arch for packages to be removed, don't strip it away
-          and remove every package if having multiple packages with same name
-          and different arch
-        o fix segfault when trying to open non-existing synthesis
+	o use specified arch for packages to be removed, don't strip it away
+	  and remove every package if having multiple packages with same name
+	  and different arch
+	o fix segfault when trying to open non-existing synthesis
 
 * Thu Feb 10 2011 Funda Wang <fwang@mandriva.org> 4.13-3
 + Revision: 637108
@@ -300,41 +302,41 @@ make test
 - remove NVRA pattern matching hack, it's moved to rpm for now..
 - fix getting EVR from rpm headers
 - new release (4.13):
-  	o fix evr extraction which broke for some packages with i586 synthesis
-  	0 fix parsing of disttag from synthesis
-  	o add regression checks for the fields extracted from synthesis
+	o fix evr extraction which broke for some packages with i586 synthesis
+	0 fix parsing of disttag from synthesis
+	o add regression checks for the fields extracted from synthesis
 - order of %%PROVIDEVERSION isn't always the same for all rpm versions synthesis
   is generated with, so locate it based on name, rather than hardcoding location
   assumption
 - new release:
-  	o enable automatic Berkeley DB log removal for URPM::DB::open() by
-  	  default (#62271)
+	o enable automatic Berkeley DB log removal for URPM::DB::open() by
+	  default (#62271)
 - new release:
-  	o fix URPM::Resolve::*_overlap() for packages having disttag
-  	o look for EVR of package at the first element @provides@ rather than
-  	  the last
-  	o replace incorrect usage of URPM::rpmvercmp on NVRA with rpmEVRcompare
-  	  in URPM::Resolve::provided_version_that_overlaps() &
-  	  URPM::Resolve::_find_required_package__sort()
+	o fix URPM::Resolve::*_overlap() for packages having disttag
+	o look for EVR of package at the first element @provides@ rather than
+	  the last
+	o replace incorrect usage of URPM::rpmvercmp on NVRA with rpmEVRcompare
+	  in URPM::Resolve::provided_version_that_overlaps() &
+	  URPM::Resolve::_find_required_package__sort()
 - new release:
-  	o fix distepoch detection breakage with proper synthesis
+	o fix distepoch detection breakage with proper synthesis
 - make URPM::Package::get_tag() handle NVRA tag for synthesis (fixing
   regression in previous version)
 - new release: 4.8
-  	o fix a bug causing segfault when trying open a non-existing segfault
-  	  which for some reaallly odd reason didn't get triggered before now
-  	o remove a last couple of remaining leftovers after db conversion
-  	o really include the workaround for removal issue that was accidentally
-  	  omitted in the previous release
-  	o remove all indices for old rpmdb after conversion also when not doing
-  	  rebuild
+	o fix a bug causing segfault when trying open a non-existing segfault
+	  which for some reaallly odd reason didn't get triggered before now
+	o remove a last couple of remaining leftovers after db conversion
+	o really include the workaround for removal issue that was accidentally
+	  omitted in the previous release
+	o remove all indices for old rpmdb after conversion also when not doing
+	  rebuild
 - new release: 4.7
 - revert DB_CONFIG hack, fixed in rpm now..
 - new release: 4.6
-  	o drop deprecated URPM::Pkg->header_filename
-  	o make URPM::Pkg->filename properly return the filename in synthesis,
-  	  rather than trying to generate it from NVRA
-  	o add URPM::DB::close()
+	o drop deprecated URPM::Pkg->header_filename
+	o make URPM::Pkg->filename properly return the filename in synthesis,
+	  rather than trying to generate it from NVRA
+	o add URPM::DB::close()
 
 * Sun Jan 09 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.5-1
 + Revision: 630828
