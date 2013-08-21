@@ -45,6 +45,8 @@ make test
 %install
 %makeinstall_std
 
+rm -fv %{perl_vendorarch}/URPM/.perl_checker
+
 %files
 %doc README
 %{_mandir}/man3/*
