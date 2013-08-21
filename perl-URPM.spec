@@ -45,7 +45,7 @@ make test
 %install
 %makeinstall_std
 
-rm -fv %{perl_vendorarch}/URPM/.perl_checker
+rm -f %{buildroot}%{perl_vendorarch}/URPM/.perl_checker
 
 %files
 %doc README
