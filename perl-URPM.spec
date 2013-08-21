@@ -3,11 +3,10 @@
 Summary:	URPM module for perl
 Name:		perl-%{modname}
 Version:	4.47
-Release:	3
+Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
-Patch1:		perl-URPM.find_candidate_packages.patch
 URL:		https://abf.rosalinux.ru/moondrake/urpmi
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
@@ -31,7 +30,6 @@ hdlist files and manage them in memory.
 
 %prep
 %setup -q -n %{modname}-%{version}
-%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
@@ -47,6 +45,8 @@ make test
 %install
 %makeinstall_std
 
+rm -f %{buildroot}%{perl_vendorarch}/URPM/.perl_checker
+
 %files
 %doc README
 %{_mandir}/man3/*
@@ -58,6 +58,11 @@ make test
 
 
 %changelog
+* Tue Aug 20 2013 Robert Xu <rxu@lincomlinux.org> 4.47-4
+- Attempt to fix rpmdrake usage with finding candidate packages
+- Coverity analyser fixes
+- Improve force-req-update handling and skip-installed-alternatives
+
 * Sat Mar 16 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 4.44-1
 - new version:
 	o disable rpmlint for building test package during regression tests
