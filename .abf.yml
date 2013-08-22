@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   URPM-4.47.tar.xz: 801bc8fa4a5e2d1112b068183426a50bbf4ad125
+sources:
+  URPM-4.47.tar.xz: 88aaddddf02249689610db203aef28f2b747f4ed
