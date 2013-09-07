@@ -2,12 +2,12 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{modname}
-Version:	4.47
-Release:	6
+Version:	4.48.1
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
-URL:		https://abf.rosalinux.ru/moondrake/urpmi
+URL:		https://abf.rosalinux.ru/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
