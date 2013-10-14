@@ -1,0 +1,11 @@
+--- URPM-4.48.1/URPM.xs.orig	2013-10-14 16:59:25.979369628 +0100
++++ URPM-4.48.1/URPM.xs	2013-10-14 16:59:46.325370451 +0100
+@@ -1074,7 +1074,7 @@
+       const char *disttag = get_name(pkg->h, RPMTAG_DISTTAG);
+       const char *distepoch = get_name(pkg->h, RPMTAG_DISTEPOCH);
+ 
+-      p += snprintf(buff, sizeof(buff), "%s@%d@%ld@%s", nvra,
++      p += snprintf(buff, sizeof(buff), "%s@%d@%lld@%s", nvra,
+ 		    (int)get_int(pkg->h, RPMTAG_EPOCH), get_int(pkg->h, RPMTAG_SIZE), 
+ 		    group);
+       if (disttag || distepoch) {
