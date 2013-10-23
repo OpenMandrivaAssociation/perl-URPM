@@ -3,11 +3,12 @@
 Summary:	URPM module for perl
 Name:		perl-%{modname}
 Version:	4.48.1
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
 Patch1:		perl-URPM-4.48.1-groups.patch
+Patch2:		perl-URPM-4.48.1-resolve_failure.patch
 URL:		https://abf.rosalinux.ru/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
@@ -38,6 +39,7 @@ perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 %make
 
 %check
+# crisb - TODO some tests still fail but nothing important
 exit 0
 # skip check suite when building on rpm 4, as some parts of it depends on
 # rpm 5.3 to be installed
