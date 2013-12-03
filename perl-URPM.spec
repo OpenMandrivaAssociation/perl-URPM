@@ -2,6 +2,7 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{modname}
+<<<<<<< HEAD
 Version:	4.48.2
 Release:	2
 License:	GPLv2+ or Artistic
@@ -9,6 +10,14 @@ Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
 Patch0:		URPM-4.48.2-allow-old-srpms.patch
 URL:		https://abf.rosalinux.ru/omv_software/perl-URPM
+=======
+Version:	4.50
+Release:	1
+License:	GPLv2+ or Artistic
+Group:		Development/Perl
+Source0:	%{modname}-%{version}.tar.xz
+URL:		https://abf.rosalinux.ru/moondrake/urpmi
+>>>>>>> 3bebeb045f168aa89558818f8df3c6312de26bf0
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
@@ -31,15 +40,17 @@ hdlist files and manage them in memory.
 
 %prep
 %setup -q -n %{modname}-%{version}
-%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 %make
 
 %check
+<<<<<<< HEAD
 # crisb - TODO some tests still fail but nothing important
 exit 0
+=======
+>>>>>>> 3bebeb045f168aa89558818f8df3c6312de26bf0
 # skip check suite when building on rpm 4, as some parts of it depends on
 # rpm 5.3 to be installed
 [ "`rpm --version|sed -e  's/^.* \([0-9]\+\).*/\1/'`" != 4 ] && \
