@@ -2,5 +2,6 @@ removed_sources:
   URPM-4.47.tar.xz: 88aaddddf02249689610db203aef28f2b747f4ed
   URPM-4.48.3.tar.xz: 0087ec999d6196724ab61d10482091ab5c4df323
   URPM-4.48.4.tar.xz: 0db6258bec92c2aeaa3a0673693574bfb3599e7e
-sources:
   URPM-4.48.5.tar.xz: 1218da807ec9054be916a7c2b6d4fa37b4c7ee80
+sources:
+  URPM-4.48.6.tar.xz: a6ada581d5bd5f08ea5729693743bfaf5f9688e9
