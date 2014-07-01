@@ -3,11 +3,13 @@
 Summary:	URPM module for perl
 Name:		perl-%{modname}
 Version:	4.48.7
-Release:	1
+Release:	1.1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.rosalinux.ru/omv_software/perl-URPM
+# Support larger sets of provides
+Patch10:	URPM-4.43-double-list-buf-size.patch
 BuildRequires:	rpm-devel >= 1:5.4
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
@@ -30,6 +32,7 @@ hdlist files and manage them in memory.
 
 %prep
 %setup -q -n %{modname}-%{version}
+%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"

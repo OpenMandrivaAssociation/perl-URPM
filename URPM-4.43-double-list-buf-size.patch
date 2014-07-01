@@ -1,0 +1,12 @@
+diff -Naur URPM-4.43.orig/URPM.xs URPM-4.43/URPM.xs
+--- URPM-4.43.orig/URPM.xs	2014-06-24 12:55:43.360246376 +0400
++++ URPM-4.43/URPM.xs	2014-06-24 15:35:00.550151482 +0400
+@@ -919,7 +919,7 @@
+ 
+ static char *
+ pack_list(const Header header, rpmTag tag_name, rpmTag tag_flags, rpmTag tag_version, rpmsenseFlags (*check_flag)(rpmsenseFlags)) {
+-  char buff[8*BUFSIZ];
++  char buff[16*BUFSIZ];
+   char *p = buff;
+   HE_t he = memset(alloca(sizeof(*he)), 0, sizeof(*he));
+ 
