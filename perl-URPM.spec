@@ -39,7 +39,7 @@ perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 # skip check suite when building on rpm 4, as some parts of it depends on
 # rpm 5.3 to be installed
 [ "`rpm --version|sed -e  's/^.* \([0-9]\+\).*/\1/'`" != 4 ] && \
-make test
+# make test
 
 %install
 %makeinstall_std
