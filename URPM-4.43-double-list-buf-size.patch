@@ -1,7 +1,7 @@
-diff -Naur URPM-4.43.orig/URPM.xs URPM-4.43/URPM.xs
---- URPM-4.43.orig/URPM.xs	2014-06-24 12:55:43.360246376 +0400
-+++ URPM-4.43/URPM.xs	2014-06-24 15:35:00.550151482 +0400
-@@ -919,7 +919,7 @@
+diff -Naur URPM-4.48.7/URPM.xs URPM-4.48.7.tpg/URPM.xs
+--- URPM-4.48.7/URPM.xs	2014-04-02 19:25:33.000000000 +0000
++++ URPM-4.48.7.tpg/URPM.xs	2014-08-04 20:14:28.836780464 +0000
+@@ -969,7 +969,7 @@
  
  static char *
  pack_list(const Header header, rpmTag tag_name, rpmTag tag_flags, rpmTag tag_version, rpmsenseFlags (*check_flag)(rpmsenseFlags)) {
@@ -10,3 +10,21 @@ diff -Naur URPM-4.43.orig/URPM.xs URPM-4.43/URPM.xs
    char *p = buff;
    HE_t he = memset(alloca(sizeof(*he)), 0, sizeof(*he));
  
+@@ -2580,7 +2580,7 @@
+   char *provides_files
+   CODE:
+   if (pkg->info) {
+-    char buff[8*BUFSIZ];
++    char buff[16*BUFSIZ];
+     size_t size;
+ 
+     /* info line should be the last to be written */
+@@ -3440,7 +3440,7 @@
+     HV *obsoletes = fobsoletes && SvROK(*fobsoletes) && SvTYPE(SvRV(*fobsoletes)) == SVt_PVHV ? (HV*)SvRV(*fobsoletes) : NULL;
+ 
+     if (depslist != NULL) {
+-      char buff[8*BUFSIZ];
++      char buff[16*BUFSIZ];
+       char *p, *eol;
+       int buff_len;
+       struct s_Package pkg;
