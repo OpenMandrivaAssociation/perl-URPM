@@ -1,0 +1,30 @@
+diff -Naur URPM-4.65/URPM.xs URPM-4.65.tpg/URPM.xs
+--- URPM-4.65/URPM.xs	2015-01-03 15:39:53.000000000 +0000
++++ URPM-4.65.tpg/URPM.xs	2015-02-12 23:26:17.899818076 +0000
+@@ -976,7 +976,7 @@
+ 
+ static char *
+ pack_list(const Header header, rpmTag tag_name, rpmTag tag_flags, rpmTag tag_version, rpmsenseFlags (*check_flag)(rpmsenseFlags)) {
+-  char buff[32*BUFSIZ];
++  char buff[64*BUFSIZ];
+   char *p = buff;
+   HE_t he = memset(alloca(sizeof(*he)), 0, sizeof(*he));
+ 
+@@ -2550,7 +2550,7 @@
+   char *provides_files
+   CODE:
+   if (pkg->info) {
+-    char buff[32*BUFSIZ];
++    char buff[64*BUFSIZ];
+     size_t size;
+ 
+     /* info line should be the last to be written */
+@@ -3421,7 +3421,7 @@
+     HV *obsoletes = fobsoletes && SvROK(*fobsoletes) && SvTYPE(SvRV(*fobsoletes)) == SVt_PVHV ? (HV*)SvRV(*fobsoletes) : NULL;
+ 
+     if (depslist != NULL) {
+-      char buff[32*BUFSIZ];
++      char buff[64*BUFSIZ];
+       char *p, *eol;
+       int buff_len;
+       struct s_Package pkg;
