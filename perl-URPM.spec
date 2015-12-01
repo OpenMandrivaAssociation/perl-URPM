@@ -17,6 +17,7 @@ BuildRequires:	perl-JSON-PP
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
 BuildRequires:	perl(ExtUtils::MM_Unix)
+BuildRequires:	perl(ExtUtils::Manifest)
 
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
