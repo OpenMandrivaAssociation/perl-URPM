@@ -2,13 +2,12 @@
 
 Summary:	URPM module for perl
 Name:		perl-%{modname}
-Version:	4.65
-Release:	4
+Version:	4.65.1
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
-URL:		https://abf.rosalinux.ru/software/perl-URPM
-Patch0:		URPM-4.65-raise-BUFSIZ.patch
+URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel
