@@ -19,6 +19,7 @@ BuildRequires:	perl(RPMBDB)
 BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
 BuildRequires:	perl(ExtUtils::Command)
+BuildRequires:	perl(File::Glob)
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
