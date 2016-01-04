@@ -10,7 +10,7 @@ Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
-BuildRequires:	perl-devel
+BuildRequires:	perl(DynaLoader)
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
