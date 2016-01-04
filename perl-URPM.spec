@@ -19,6 +19,7 @@ BuildRequires:	perl(ExtUtils::Install)
 BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
 BuildRequires:	perl(ExtUtils::Command)
+BuildRequires:	perl(ExtUtils::Typemaps)
 BuildRequires:	perl(File::Glob)
 
 # we can now expect librpm API to be backward compatible
