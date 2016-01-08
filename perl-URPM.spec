@@ -15,7 +15,7 @@ BuildRequires:	perl-List-MoreUtils
 BuildRequires:	perl-JSON-PP
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
-BuildRequires:	perl(DynaLoader)
+#BuildRequires:	perl(DynaLoader)
 BuildRequires:	perl(ExtUtils::Install)
 BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
