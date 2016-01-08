@@ -11,7 +11,7 @@ URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel >= 5.20.3-1.2
-BuildRequires:	perl(List::MoreUtils) >= 0.413.0-2
+BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
