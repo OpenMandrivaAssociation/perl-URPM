@@ -3,40 +3,41 @@
 Summary:	URPM module for perl
 Name:		perl-%{modname}
 Version:	4.65.1
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
-BuildRequires:	perl-devel >= 2:5.20.3-1.2
+BuildRequires:	perl-devel
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
-# needed for splitted perl
-BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
-BuildRequires:	perl(ExtUtils::Install)
-BuildRequires:	perl(ExtUtils::MM_Unix)
-BuildRequires:	perl(ExtUtils::Manifest)
-BuildRequires:	perl(ExtUtils::Command)
-BuildRequires:	perl(ExtUtils::Typemaps)
-BuildRequires:	perl(ExtUtils::Mkbootstrap)
-BuildRequires:	perl(ExtUtils::Command::MM)
-BuildRequires:	perl(File::Glob)
-# tests
-BuildRequires:	perl(Test::Harness)
-BuildRequires:	perl(Test::More)
-BuildRequires:	perl(File::Copy)
-BuildRequires:	perl(File::Path)
-BuildRequires:	perl(TAP::Formatter::File)
+
+# splitted perl is not yet ready so revert some changes
+#BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
+#BuildRequires:	perl(ExtUtils::Install)
+#BuildRequires:	perl(ExtUtils::MM_Unix)
+#BuildRequires:	perl(ExtUtils::Manifest)
+#BuildRequires:	perl(ExtUtils::Command)
+#BuildRequires:	perl(ExtUtils::Typemaps)
+#BuildRequires:	perl(ExtUtils::Mkbootstrap)
+#BuildRequires:	perl(ExtUtils::Command::MM)
+#BuildRequires:	perl(File::Glob)
+#BuildRequires:	perl(Test::Harness)
+#BuildRequires:	perl(Test::More)
+#BuildRequires:	perl(File::Copy)
+#BuildRequires:	perl(File::Path)
+#BuildRequires:	perl(TAP::Formatter::File)
+
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
 Conflicts:	urpmi < 7.24
 Requires:	perl(MDV::Packdrakeng)
-Requires:	perl(DynaLoader) >= 5.20.3-1.2
-Requires:	perl-base >= 2:5.20.3-1.2
+# splitted perl is not yet ready so revert some changes
+#Requires:	perl(DynaLoader) >= 5.20.3-1.2
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
