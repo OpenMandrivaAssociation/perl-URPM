@@ -35,6 +35,7 @@ Requires:	rpm
 Conflicts:	rpm < 1:5.3
 Conflicts:	urpmi < 7.24
 Requires:	perl(MDV::Packdrakeng)
+Requires:	perl(DynaLoader) >= 5.20.3-1.2
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
