@@ -15,7 +15,7 @@ BuildRequires:	perl-List-MoreUtils
 BuildRequires:	perl-JSON-PP
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
-#BuildRequires:	perl(DynaLoader)
+BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
 BuildRequires:	perl(ExtUtils::Install)
 BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
@@ -25,10 +25,10 @@ BuildRequires:	perl(ExtUtils::Mkbootstrap)
 BuildRequires:	perl(ExtUtils::Command::MM)
 BuildRequires:	perl(File::Glob)
 # tests
-#BuildRequires:	perl(Test::Harness)
-#BuildRequires:	perl(Test::More)
-#BuildRequires:	perl(File::Copy)
-#BuildRequires:	perl(File::Path)
+BuildRequires:	perl(Test::Harness)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(File::Copy)
+BuildRequires:	perl(File::Path)
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
