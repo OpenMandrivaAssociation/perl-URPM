@@ -25,7 +25,7 @@ BuildRequires:	perl(ExtUtils::Mkbootstrap)
 BuildRequires:	perl(ExtUtils::Command::MM)
 BuildRequires:	perl(File::Glob)
 # tests
-BuildRequires:	perl(Test::Harness)
+#BuildRequires:	perl(Test::Harness)
 #BuildRequires:	perl(Test::More)
 #BuildRequires:	perl(File::Copy)
 #BuildRequires:	perl(File::Path)
