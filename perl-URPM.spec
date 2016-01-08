@@ -12,7 +12,7 @@ BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
 BuildRequires:	perl-devel >= 5.20.3-1.2
 BuildRequires:	perl(List::MoreUtils) >= 0.413.0-2
-BuildRequires:	perl(JSON::PP) >= 2.273.0-4
+BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
 BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
