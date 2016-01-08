@@ -29,7 +29,7 @@ BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(File::Copy)
 BuildRequires:	perl(File::Path)
-BuildRequires:	perl(TAP::Formatter)
+BuildRequires:	perl(TAP::Formatter::File)
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
