@@ -10,7 +10,7 @@ Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
-BuildRequires:	perl-devel >= 5.20.3-1.2
+BuildRequires:	perl-devel >= 2:5.20.3-1.2
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
@@ -36,6 +36,7 @@ Conflicts:	rpm < 1:5.3
 Conflicts:	urpmi < 7.24
 Requires:	perl(MDV::Packdrakeng)
 Requires:	perl(DynaLoader) >= 5.20.3-1.2
+Requires:	perl-base >= 2:5.20.3-1.2
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
