@@ -10,9 +10,9 @@ Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
-BuildRequires:	perl-devel
-BuildRequires:	perl-List-MoreUtils
-BuildRequires:	perl-JSON-PP
+BuildRequires:	perl-devel >= 5.20.3-1.2
+BuildRequires:	perl(List::MoreUtils) >= 5.20.3-1.2
+BuildRequires:	perl(JSON::PP) >= 5.20.3-1.2
 BuildRequires:	perl(RPMBDB)
 # needed for splitted perl
 BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
@@ -29,6 +29,7 @@ BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(File::Copy)
 BuildRequires:	perl(File::Path)
+BuildRequires:	perl(TAP::Formatter)
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
 Conflicts:	rpm < 1:5.3
