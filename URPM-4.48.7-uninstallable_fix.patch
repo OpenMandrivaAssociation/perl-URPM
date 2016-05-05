@@ -1,0 +1,12 @@
+--- URPM-4.48.7/URPM/Resolve.pm.orig	2016-05-05 12:52:39.035024771 +0100
++++ URPM-4.48.7/URPM/Resolve.pm	2016-05-05 12:53:33.043621872 +0100
+@@ -227,7 +227,8 @@
+ 	} else {
+ 	    if ($pkg->fullname !~ /\.src$/) {
+ 	        foreach my $altpkg ($urpm->packages_providing($pkg->name)) {
+-	            if( URPM::rpmEVRcompare($altpkg->EVR, $pkg->EVR) > 0 ) {
++	            if( is_package_installed($db, $pkg) and URPM::rpmEVRcompare($altpkg->EVR, $pkg->EVR) > 0 and 
++			    $altpkg->arch eq $pkg->arch and $pkg->name eq $altpkg->name) {
+  		        $urpm->{debug_URPM}("Skipping ".$pkg->fullname." since newer version of the package exists in repositories" ) if $urpm->{debug_URPM};
+ 	    	        return;
+ 	            }
