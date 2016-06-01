@@ -16,19 +16,19 @@ BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
 
 # splitted perl is not yet ready so revert some changes
-BuildRequires:	perl(DynaLoader) >= 5.20.3-4
-BuildRequires:	perl(ExtUtils::Install)
-BuildRequires:	perl(ExtUtils::MM_Unix)
-BuildRequires:	perl(ExtUtils::Manifest)
-BuildRequires:	perl(ExtUtils::Command)
-BuildRequires:	perl(ExtUtils::Typemaps)
-BuildRequires:	perl(ExtUtils::Mkbootstrap)
-BuildRequires:	perl(ExtUtils::Command::MM)
-BuildRequires:	perl(File::Glob)
+BuildRequires:	perl(DynaLoader) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Install) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::MM_Unix) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Manifest) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Command) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Typemaps) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Mkbootstrap) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Command::MM) >= 2:5.20.3-4
+BuildRequires:	perl(File::Glob) >= 2:5.20.3-4
 BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(Test::More)
-BuildRequires:	perl(File::Copy)
-BuildRequires:	perl(File::Path)
+BuildRequires:	perl(File::Copy) >= 2:5.20.3-4
+BuildRequires:	perl(File::Path) >= 2:5.20.3-4
 BuildRequires:	perl(TAP::Formatter::File)
 
 # we can now expect librpm API to be backward compatible
@@ -37,7 +37,7 @@ Conflicts:	rpm < 1:5.3
 Conflicts:	urpmi < 7.24
 Requires:	perl(MDV::Packdrakeng)
 # splitted perl is not yet ready so revert some changes
-Requires:	perl(DynaLoader) >= 5.20.3-4
+Requires:	perl(DynaLoader) >= 2:5.20.3-4
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
