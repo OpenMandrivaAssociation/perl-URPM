@@ -3,7 +3,7 @@
 Summary:	URPM module for perl
 Name:		perl-%{modname}
 Version:	4.65.1
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	%{modname}-%{version}.tar.xz
@@ -16,20 +16,20 @@ BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
 
 # splitted perl is not yet ready so revert some changes
-#BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
-#BuildRequires:	perl(ExtUtils::Install)
-#BuildRequires:	perl(ExtUtils::MM_Unix)
-#BuildRequires:	perl(ExtUtils::Manifest)
-#BuildRequires:	perl(ExtUtils::Command)
-#BuildRequires:	perl(ExtUtils::Typemaps)
-#BuildRequires:	perl(ExtUtils::Mkbootstrap)
-#BuildRequires:	perl(ExtUtils::Command::MM)
-#BuildRequires:	perl(File::Glob)
-#BuildRequires:	perl(Test::Harness)
-#BuildRequires:	perl(Test::More)
-#BuildRequires:	perl(File::Copy)
-#BuildRequires:	perl(File::Path)
-#BuildRequires:	perl(TAP::Formatter::File)
+BuildRequires:	perl(DynaLoader) >= 5.20.3-4
+BuildRequires:	perl(ExtUtils::Install)
+BuildRequires:	perl(ExtUtils::MM_Unix)
+BuildRequires:	perl(ExtUtils::Manifest)
+BuildRequires:	perl(ExtUtils::Command)
+BuildRequires:	perl(ExtUtils::Typemaps)
+BuildRequires:	perl(ExtUtils::Mkbootstrap)
+BuildRequires:	perl(ExtUtils::Command::MM)
+BuildRequires:	perl(File::Glob)
+BuildRequires:	perl(Test::Harness)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(File::Copy)
+BuildRequires:	perl(File::Path)
+BuildRequires:	perl(TAP::Formatter::File)
 
 # we can now expect librpm API to be backward compatible
 Requires:	rpm
@@ -37,7 +37,7 @@ Conflicts:	rpm < 1:5.3
 Conflicts:	urpmi < 7.24
 Requires:	perl(MDV::Packdrakeng)
 # splitted perl is not yet ready so revert some changes
-#Requires:	perl(DynaLoader) >= 5.20.3-1.2
+Requires:	perl(DynaLoader) >= 5.20.3-4
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
 Provides:	perl(URPM::Signature) = %{version}-%{release}
