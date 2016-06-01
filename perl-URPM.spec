@@ -10,25 +10,25 @@ Source0:	%{modname}-%{version}.tar.xz
 URL:		https://abf.io/omv_software/perl-URPM
 BuildRequires:	rpm-devel >= 1:5.4.10-3
 BuildRequires:	perl(MDV::Packdrakeng)
-BuildRequires:	perl-devel
+BuildRequires:	perl-devel >= 2:5.20.3-4
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(RPMBDB)
 
 # splitted perl is not yet ready so revert some changes
 BuildRequires:	perl(DynaLoader) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Install) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::MM_Unix) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Manifest) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Command) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Typemaps) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Mkbootstrap) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::Command::MM) >= 2:5.20.3-4
-BuildRequires:	perl(File::Glob) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Install)
+BuildRequires:	perl(ExtUtils::MM_Unix)
+BuildRequires:	perl(ExtUtils::Manifest)
+BuildRequires:	perl(ExtUtils::Command)
+BuildRequires:	perl(ExtUtils::Typemaps)
+BuildRequires:	perl(ExtUtils::Mkbootstrap)
+BuildRequires:	perl(ExtUtils::Command::MM)
+BuildRequires:	perl(File::Glob)
 BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(Test::More)
-BuildRequires:	perl(File::Copy) >= 2:5.20.3-4
-BuildRequires:	perl(File::Path) >= 2:5.20.3-4
+BuildRequires:	perl(File::Copy)
+BuildRequires:	perl(File::Path)
 BuildRequires:	perl(TAP::Formatter::File)
 
 # we can now expect librpm API to be backward compatible
