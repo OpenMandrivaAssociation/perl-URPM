@@ -48,7 +48,7 @@ hdlist files and manage them in memory.
 
 %prep
 %setup -q -n %{modname}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
